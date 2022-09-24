@@ -7,6 +7,10 @@
 // 1, 7 -> такого элемента в массиве нет
 
 Console.Clear();
+Console.Write("Введите № строки: ");
+int i1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите № столбца: ");
+int j1 = Convert.ToInt32(Console.ReadLine());
 int[,] ArrayCreate(int rows, int colums, int min, int max)
 {
     int[,] matrix = new int[rows, colums];
@@ -35,16 +39,19 @@ void MatrixPrint(int[,] matrix)
         Console.WriteLine("]");
     }
 }
-int rows = 3;
-int colums = 4;
-Console.Write("Введите № строки: ");
-int i1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите № столбца: ");
-int j1 = Convert.ToInt32(Console.ReadLine());
-int [,] array2D = ArrayCreate(rows, colums, 1, 9);
-MatrixPrint(array2D);
-if (i1 <= rows && j1 <= colums)
+
+
+void FindMatrix(int[,] matrix)
 {
-    Console.Write($" -> {array2D[i1-1,j1-1]}");
+    int rows = matrix.GetLength(0);
+    int colums = matrix.GetLength(1);
+    if (i1 <= rows && j1 <= colums)
+    {
+        Console.Write($" -> {matrix[i1 - 1, j1 - 1]}");
+    }
+    else Console.Write("Такого элемента в массиве нет");
 }
-else Console.Write("Такого элемента в массиве нет");
+
+int[,] array2D = ArrayCreate(3, 4, 1, 9);
+MatrixPrint(array2D);
+FindMatrix(array2D);
