@@ -57,6 +57,7 @@ int[,] MultiMatrix(int[,] array2D, int[,] array2D1)
     }
     return multi;
 }
+
 Console.WriteLine("Матрица 1");
 int[,] array2D = ArrayCreate(2, 2, 1, 9);
 MatrixPrint(array2D);

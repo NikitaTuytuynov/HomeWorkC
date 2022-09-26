@@ -39,5 +39,6 @@ void MatrixPrint(int[,,] matrix)
         Console.WriteLine();
     }
 }
+
 int[,,] array3D = ArrayCreate(2, 2, 2, 10, 85);
 MatrixPrint(array3D);

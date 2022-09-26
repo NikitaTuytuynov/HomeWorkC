@@ -57,7 +57,6 @@ void MatrixCount(int[,] matrix)
             row = i;
         }
     }
-
     Console.WriteLine($"Номер строки с наименьшей суммой элементов: {row + 1}, с суммой {count}.");
 }
 
